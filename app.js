@@ -17,7 +17,7 @@ app.set("port", 4000);
 
 // Configura CORS antes de las rutas
 app.use(cors({
-  origin: 'https://darkysfishshop.com.mx/', // Asegúrate de usar tu dominio aquí
+  origin: 'http://darkysfishshop.com.mx/', // Asegúrate de usar tu dominio aquí
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Cabeceras permitidas
 }));
