@@ -9,6 +9,12 @@ const productsRoutes = require('./src/routes/product');
 require('dotenv').config();
 const Product = require('./schema/products.js');
 
+
+app.use(cors({
+  origin: 'https://darkysfishshop.com.mx/', // Asegúrate de usar tu dominio aquí
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+  allowedHeaders: ['Content-Type', 'Authorization'], // Cabeceras permitidas
+}));
 async function main() {
     try {
         // Verifica la conexión y sincroniza los modelos
