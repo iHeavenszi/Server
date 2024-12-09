@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const sequelize = require("../src/database.js"); // Importamos la conexión
 const { generateRefreshToken, generateAccessToken } = require("../auth/generateTokens.js");
 const Token = require("../schema/token.js");

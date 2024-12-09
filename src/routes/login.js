@@ -1,6 +1,6 @@
 const { jsonResponse } = require("../../lib/jsonResponse");
 const User = require("../../schema/user");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const getUserInfo = require("../../lib/getUserInfo");
 
 
