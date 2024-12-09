@@ -24,6 +24,7 @@ router.post("/",async (req, res)=>{
                     id: newUser.id,
                     username: newUser.username,
                     name: newUser.name,
+                    email: newUser.email,
                 },
             })
         );
