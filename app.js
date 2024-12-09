@@ -17,10 +17,10 @@ app.set("port", 4000);
 
 // Configura CORS antes de las rutas
 app.use(cors({
-  origin: '192.185.131.38/', // Asegúrate de usar tu dominio aquí
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-  allowedHeaders: ['Content-Type', 'Authorization'], // Cabeceras permitidas
-}));
+    origin: '*', // Permitir todas las conexiones
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Cabeceras permitidas
+  }));
 
 // Middlewares
 app.use(bodyParser.json());
