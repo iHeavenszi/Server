@@ -5,9 +5,9 @@ const User = require("../../schema/user");
 const router = require("express").Router();
 
 router.post("/",async (req, res)=>{
-    const {username, name, password} = req.body;
+    const {username, name, password, email} = req.body;
 
-    if(!!!username || !!!name || !!!password){
+    if(!!!username || !!!name || !!!password|| !!!email){
         return res.status(400).json(jsonResponse(400,{
             error: "datos requeridos"
         }))
@@ -15,7 +15,7 @@ router.post("/",async (req, res)=>{
 
     try {
         // Crear un nuevo usuario usando el modelo de Sequelize
-        const newUser = await User.create({ username, name, password });
+        const newUser = await User.create({ username, name, password, email });
 
         return res.status(201).json(
             jsonResponse(201, {
